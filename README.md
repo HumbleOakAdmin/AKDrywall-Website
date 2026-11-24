@@ -17,13 +17,7 @@ This preview is marked `noindex`. Quote forms stay on the page and show a confir
 
 ## Publish
 
-The repository is public and Pages is not turned on yet. `.github/workflows/pages.yml` publishes the site root when `main` is pushed, after Pages is set to use GitHub Actions.
-
-1. Push this project to `main`.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, set **Source** to **GitHub Actions**.
-
-The first push may only register the workflow. If the site does not appear, run **Deploy GitHub Pages** from the Actions tab.
+GitHub Pages publishes the repository root from the `main` branch. A push to `main` updates the live preview.
 
 The site will be served at:
 
