@@ -66,4 +66,21 @@
       play();
     }
   });
+
+  var rail = document.querySelector(".rail span");
+  var drift = document.querySelectorAll("[data-drift]");
+  if (rail || drift.length) {
+    var paint = function () {
+      if (rail) {
+        var height = document.documentElement.scrollHeight - window.innerHeight;
+        rail.style.width = (height > 0 ? (window.scrollY / height) * 100 : 0) + "%";
+      }
+      drift.forEach(function (el) {
+        var top = el.getBoundingClientRect().top;
+        el.style.transform = "translateY(" + ((top - window.innerHeight * 0.4) * -0.08).toFixed(1) + "px)";
+      });
+    };
+    paint();
+    window.addEventListener("scroll", paint, { passive: true });
+  }
 })();

@@ -22,14 +22,20 @@
     .wrap { width: 85vw; margin: 0 auto; }
     [id] { scroll-margin-top: 112px; }
     header.nav { position: sticky; top: 38px; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; min-height: 68px; padding-inline: 7.5vw; background: #fffdf8; border-bottom: 1px solid #e5dfd4; box-shadow: 0 8px 20px rgba(23,20,16,.06); }
+    .rail { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; pointer-events: none; }
+    .rail span { display: block; height: 100%; width: 0; background: var(--red); }
     .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; letter-spacing: -0.03em; }
     .brand img { width: 42px; height: 42px; object-fit: contain; }
     .nav-links { display: none; gap: 16px; font-weight: 600; font-size: 14px; }
     .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 16px; border-radius: 999px; background: var(--red); color: #fff; font-weight: 700; border: 0; cursor: pointer; font: inherit; transition: transform .2s ease, filter .2s ease; }
     .btn.ink { background: var(--ink); }
-    .hero { display: grid; gap: 18px; padding-bottom: 10px; }
+    .hero { position: relative; display: grid; gap: 18px; padding-bottom: 10px; }
+    .hero > .glow { position: absolute; z-index: 0; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(226,59,47,.22), transparent 68%); filter: blur(6px); pointer-events: none; right: -40px; top: -80px; }
+    .hero > .glow.two { width: 220px; height: 220px; left: 8%; right: auto; bottom: 10px; top: auto; background: radial-gradient(circle, rgba(23,20,16,.08), transparent 70%); }
+    .hero > :not(.glow) { position: relative; z-index: 1; }
     .hero-copy h1 { margin: 8px 0; font-size: clamp(42px, 11vw, 84px); line-height: .92; letter-spacing: -0.055em; }
-    .hero-copy h1::after { content: ""; display: block; width: 72px; height: 6px; margin-top: 16px; border-radius: 99px; background: var(--red); transform-origin: left center; }
+    .hero-copy h1 span { display: block; overflow: hidden; }
+    .hero-copy h1 i { display: block; font-style: normal; }
     .kicker { margin: 0; font-weight: 700; color: var(--red); }
     .lede { margin: 0; max-width: 38ch; color: var(--muted); font-size: 18px; }
     .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; }
@@ -37,7 +43,10 @@
     .stats b { display: block; font-size: 22px; letter-spacing: -0.04em; }
     .stats span { color: var(--muted); font-size: 12px; font-weight: 600; }
     .sheet { background: var(--card); border-radius: 28px; padding: 18px; box-shadow: 0 20px 50px rgba(23,20,16,.06); }
-    .sheet h2 { margin: 0 0 12px; font-size: 26px; letter-spacing: -0.04em; }
+    .sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+    .sheet h2 { margin: 0; font-size: 26px; letter-spacing: -0.04em; }
+    .sheet-head { margin-bottom: 12px; }
+    .seal { width: 54px; height: 54px; flex: none; }
     label { display: grid; gap: 4px; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
     input, select, textarea { width: 100%; border: 1px solid #e4ddd2; background: #fff; border-radius: 12px; padding: 12px; font: inherit; }
     .row { display: grid; gap: 8px; }
@@ -46,16 +55,20 @@
     .fine { color: var(--muted); font-size: 13px; }
     .quote-note { font-weight: 700; }
     .reel { overflow: hidden; margin: 18px 0; border-block: 1px solid #e5dfd4; }
-    .reel-track { display: flex; gap: 28px; width: max-content; padding: 12px 0; animation: reel 32s linear infinite; font-weight: 700; letter-spacing: -0.02em; }
+    .reel-track { display: flex; gap: 28px; width: max-content; padding: 8px 0; animation: reel 26s linear infinite; font-weight: 700; letter-spacing: -0.02em; }
+    .reel-track.back { animation-duration: 38s; animation-direction: reverse; opacity: .45; }
     .reel:hover .reel-track { animation-play-state: paused; }
     .reel span::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 28px; border-radius: 50%; background: var(--red); }
     section { padding: 18px 0; }
     h2 { margin: 0 0 14px; font-size: clamp(32px, 6vw, 52px); letter-spacing: -0.045em; line-height: 1; }
     .bento { display: grid; gap: 10px; }
-    .bento article { background: var(--card); border-radius: 18px; padding: 16px; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; transition: transform .35s ease; }
+    .bento article { position: relative; overflow: hidden; background: var(--card); border-radius: 18px; padding: 16px; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease; }
     .bento article.wide { justify-content: space-between; }
-    .stage { height: 150px; }
-    .stage svg { display: block; width: 100% !important; height: 100% !important; }
+    .bento article::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,.35) 50%, transparent 65%); transform: translateX(-130%); pointer-events: none; }
+    .stage { height: 210px; }
+    .hero-stage { height: 250px; margin: 8px 0 4px; }
+    .mark { height: 92px; }
+    .stage svg, .mark svg, .seal svg { display: block; width: 100% !important; height: 100% !important; }
     .bento article.wide { background: var(--ink); color: #fff; }
     .bento article.red { background: var(--red); color: #fff; }
     .bento p { margin: 6px 0 0; color: var(--muted); }
@@ -73,14 +86,23 @@
     footer { padding: 10px 0 28px; color: var(--muted); font-size: 13px; }
     .dock { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 50; display: grid; grid-template-columns: 1fr 1.3fr; gap: 8px; }
     @keyframes reel { to { transform: translateX(-50%); } }
-    @keyframes rise { from { opacity: 0; transform: translateY(16px); } }
-    @keyframes draw { from { transform: scaleX(0); } }
-    html.motion .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    @keyframes rise { from { opacity: 0; transform: translateY(22px); } }
+    @keyframes lift { from { transform: translateY(115%); } }
+    @keyframes drift { 50% { transform: translate3d(-18px, 16px, 0) scale(1.06); } }
+    @keyframes sheen { to { transform: translateX(130%); } }
+    html.motion .reveal { opacity: 0; transform: translateY(28px) scale(.98); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
     html.motion .reveal.in { opacity: 1; transform: none; }
+    html.motion .reveal.in::after { animation: sheen 1.15s .15s ease both; }
     @media (prefers-reduced-motion: no-preference) {
-      .hero-copy, .sheet { animation: rise .75s cubic-bezier(.2,.7,.2,1) both; }
-      .sheet { animation-delay: .12s; }
-      .hero-copy h1::after { animation: draw .55s .3s cubic-bezier(.2,.7,.2,1) both; }
+      .glow { animation: drift 11s ease-in-out infinite; }
+      .glow.two { animation: drift 14s ease-in-out infinite reverse; }
+      .hero-copy, .sheet { animation: rise .9s cubic-bezier(.16,1,.3,1) both; }
+      .sheet { animation-delay: .15s; }
+      .hero-copy h1 i { animation: lift .9s cubic-bezier(.16,1,.3,1) both; }
+      .hero-copy h1 span:nth-child(2) i { animation-delay: .12s; }
+      .stats div { animation: rise .7s cubic-bezier(.16,1,.3,1) both; }
+      .stats div:nth-child(2) { animation-delay: .12s; }
+      .stats div:nth-child(3) { animation-delay: .24s; }
     }
     @media (hover: hover) {
       .btn:hover { transform: translateY(-2px); }
@@ -95,7 +117,7 @@
       .row { grid-template-columns: 1fr 1fr; }
       .bento { grid-template-columns: 1.4fr 1fr 1fr; }
       .bento article.wide { grid-row: span 2; }
-      .bento article:hover { transform: translateY(-6px); }
+      .bento article:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(23,20,16,.1); }
       .list a:hover { transform: translateX(6px); }
       .list a:hover strong { color: var(--red); }
     }
@@ -115,14 +137,18 @@
       <a href="#answers">Answers</a>
     </nav>
     <a class="btn ink" href="tel:+17802635193">780-263-5193</a>
+    <div class="rail" aria-hidden="true"><span></span></div>
   </header>
 
   <main class="wrap">
     <section class="hero">
+      <div class="glow" aria-hidden="true"></div>
+      <div class="glow two" aria-hidden="true"></div>
       <div class="hero-copy">
         <p class="kicker">Edmonton · Est. 2006</p>
-        <h1>The interior, handled.</h1>
+        <h1><span><i>The interior,</i></span><span><i>handled.</i></span></h1>
         <p class="lede">Drywall, framing, insulation and finish for commercial buildings, multifamily projects and homes. Family-owned. One office. One standard.</p>
+        <div class="hero-stage" data-lottie="assets/lottie/atelier.json" data-drift aria-hidden="true"></div>
         <div class="stats">
           <div><b data-count="20">20</b><span>Years</span></div>
           <div><b data-count="3">3</b><span>Sectors</span></div>
@@ -130,7 +156,10 @@
         </div>
       </div>
       <form class="sheet" id="estimate" data-quote>
-        <h2>Free estimate</h2>
+        <div class="sheet-head">
+          <h2>Free estimate</h2>
+          <div class="seal" data-lottie="assets/lottie/seal.json" aria-hidden="true"></div>
+        </div>
         <div class="row">
           <label>Name *<input name="name" required autocomplete="name"></label>
           <label>Phone *<input name="phone" type="tel" required autocomplete="tel"></label>
@@ -153,30 +182,38 @@
         <span>Drywall</span><span>Steel framing</span><span>Insulation</span><span>Spray foam</span><span>Taping</span><span>Texture</span><span>Paint</span><span>T-bar</span><span>Fire-rated</span><span>Concrete lifting</span>
         <span>Drywall</span><span>Steel framing</span><span>Insulation</span><span>Spray foam</span><span>Taping</span><span>Texture</span><span>Paint</span><span>T-bar</span><span>Fire-rated</span><span>Concrete lifting</span>
       </div>
+      <div class="reel-track back">
+        <span>Board</span><span>Steel studs</span><span>Spray foam</span><span>Texture</span><span>Paint</span><span>T-bar</span><span>Fire-rated</span><span>DensGlass</span><span>Basements</span><span>Concrete lifting</span>
+        <span>Board</span><span>Steel studs</span><span>Spray foam</span><span>Texture</span><span>Paint</span><span>T-bar</span><span>Fire-rated</span><span>DensGlass</span><span>Basements</span><span>Concrete lifting</span>
+      </div>
     </div>
 
     <section id="services">
       <h2 class="reveal">What we put on the building.</h2>
       <div class="bento">
         <article class="wide reveal">
-          <div class="stage" data-lottie="assets/lottie/layers.json" aria-hidden="true"></div>
+          <div class="stage" data-lottie="assets/lottie/layers.json" data-drift aria-hidden="true"></div>
           <p class="kicker">Primary work</p>
           <h3>Commercial &amp; multifamily interiors in Edmonton.</h3>
           <p>Apartments, multi-unit buildings and commercial rooms. We plan the sequence and keep framing, board, insulation and finish together.</p>
         </article>
         <article class="reveal">
+          <div class="mark" data-lottie="assets/lottie/studs.json" aria-hidden="true"></div>
           <h3>Drywall &amp; framing</h3>
           <p>Steel studs, boarding, fire-rated walls and DensGlass when the spec calls for it.</p>
         </article>
         <article class="reveal">
+          <div class="mark" data-lottie="assets/lottie/waves.json" aria-hidden="true"></div>
           <h3>Insulation</h3>
           <p>Walls, attics, blown-in and spray foam.</p>
         </article>
         <article class="reveal">
+          <div class="mark" data-lottie="assets/lottie/coat.json" aria-hidden="true"></div>
           <h3>Finish</h3>
           <p>Taping, ceiling texture, paint and T-bar.</p>
         </article>
         <article class="red reveal">
+          <div class="mark" data-lottie="assets/lottie/stack.json" aria-hidden="true"></div>
           <h3>Homes, still.</h3>
           <p>New builds, basements and garages. The work the company was founded on in 2006.</p>
         </article>
@@ -185,36 +222,36 @@
 
     <section id="work">
       <h2 class="reveal">Names already on the schedule.</h2>
-      <div class="list reveal">
-        <a href="#estimate"><span class="tag">Now</span><strong>Gill Manor</strong><em>Gill Built</em></a>
-        <a href="#estimate"><span class="tag">Now</span><strong>Baldwin Estates</strong><em>Zat Enterprises</em></a>
-        <a href="#estimate"><span class="tag">Now</span><strong>Kingsway Professional Center</strong><em>KNN</em></a>
-        <a href="#estimate"><span class="tag">Now</span><strong>Southern Village</strong><em>Underway</em></a>
-        <a href="#estimate"><span class="tag">Next</span><strong>McKernan Apartments</strong><em>Westrich</em></a>
-        <a href="#estimate"><span class="tag">Next</span><strong>91st</strong><em>HASCO</em></a>
-        <a href="#estimate"><span class="tag">Done</span><strong>Westpointe Greens</strong><em>Seymour Pacific</em></a>
-        <a href="#estimate"><span class="tag">Done</span><strong>Jardin Apartments</strong><em>Seymour Pacific</em></a>
-        <a href="#estimate"><span class="tag">Done</span><strong>Gill Villa</strong><em>Gill Built</em></a>
-        <a href="#estimate"><span class="tag">Done</span><strong>Gill Estates</strong><em>Gill Built</em></a>
-        <a href="#estimate"><span class="tag">Done</span><strong>10021 83rd Ave</strong><em>Lakeview</em></a>
+      <div class="list">
+        <a class="reveal" href="#estimate"><span class="tag">Now</span><strong>Gill Manor</strong><em>Gill Built</em></a>
+        <a class="reveal" href="#estimate"><span class="tag">Now</span><strong>Baldwin Estates</strong><em>Zat Enterprises</em></a>
+        <a class="reveal" href="#estimate"><span class="tag">Now</span><strong>Kingsway Professional Center</strong><em>KNN</em></a>
+        <a class="reveal" href="#estimate"><span class="tag">Now</span><strong>Southern Village</strong><em>Underway</em></a>
+        <a class="reveal" href="#estimate"><span class="tag">Next</span><strong>McKernan Apartments</strong><em>Westrich</em></a>
+        <a class="reveal" href="#estimate"><span class="tag">Next</span><strong>91st</strong><em>HASCO</em></a>
+        <a class="reveal" href="#estimate"><span class="tag">Done</span><strong>Westpointe Greens</strong><em>Seymour Pacific</em></a>
+        <a class="reveal" href="#estimate"><span class="tag">Done</span><strong>Jardin Apartments</strong><em>Seymour Pacific</em></a>
+        <a class="reveal" href="#estimate"><span class="tag">Done</span><strong>Gill Villa</strong><em>Gill Built</em></a>
+        <a class="reveal" href="#estimate"><span class="tag">Done</span><strong>Gill Estates</strong><em>Gill Built</em></a>
+        <a class="reveal" href="#estimate"><span class="tag">Done</span><strong>10021 83rd Ave</strong><em>Lakeview</em></a>
       </div>
     </section>
 
     <section id="answers">
       <h2 class="reveal">Before you call.</h2>
-      <details open>
+      <details class="reveal" open>
         <summary>What should I send for a price?</summary>
         <p>Address or site name, residential / multifamily / commercial, and the stages: framing, board, insulation, taping, texture, paint, ceilings.</p>
       </details>
-      <details>
+      <details class="reveal">
         <summary>Who am I hiring?</summary>
         <p>A&amp;K Drywall, started in 2006 by Joga Dhothar and his brothers. His family has run it for the last 10 years. Office at 5105 55 Ave, Edmonton.</p>
       </details>
-      <details>
+      <details class="reveal">
         <summary>Do you cover the surrounding area?</summary>
         <p>Yes. Edmonton and surrounding communities. Call 780-263-5193 or 780-803-3626 and say where the site is.</p>
       </details>
-      <details>
+      <details class="reveal">
         <summary>Where are the safety documents?</summary>
         <p>With the office. Ask when you send the scope and we’ll share what the project needs.</p>
       </details>
