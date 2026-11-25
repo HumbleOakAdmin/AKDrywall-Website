@@ -25,10 +25,11 @@
     .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; letter-spacing: -0.03em; }
     .brand img { width: 42px; height: 42px; object-fit: contain; }
     .nav-links { display: none; gap: 16px; font-weight: 600; font-size: 14px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 16px; border-radius: 999px; background: var(--red); color: #fff; font-weight: 700; border: 0; cursor: pointer; font: inherit; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 16px; border-radius: 999px; background: var(--red); color: #fff; font-weight: 700; border: 0; cursor: pointer; font: inherit; transition: transform .2s ease, filter .2s ease; }
     .btn.ink { background: var(--ink); }
     .hero { display: grid; gap: 18px; padding-bottom: 10px; }
     .hero-copy h1 { margin: 8px 0; font-size: clamp(42px, 11vw, 84px); line-height: .92; letter-spacing: -0.055em; }
+    .hero-copy h1::after { content: ""; display: block; width: 72px; height: 6px; margin-top: 16px; border-radius: 99px; background: var(--red); transform-origin: left center; }
     .kicker { margin: 0; font-weight: 700; color: var(--red); }
     .lede { margin: 0; max-width: 38ch; color: var(--muted); font-size: 18px; }
     .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; }
@@ -46,18 +47,22 @@
     .quote-note { font-weight: 700; }
     .reel { overflow: hidden; margin: 18px 0; border-block: 1px solid #e5dfd4; }
     .reel-track { display: flex; gap: 28px; width: max-content; padding: 12px 0; animation: reel 32s linear infinite; font-weight: 700; letter-spacing: -0.02em; }
+    .reel:hover .reel-track { animation-play-state: paused; }
     .reel span::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 28px; border-radius: 50%; background: var(--red); }
     section { padding: 18px 0; }
     h2 { margin: 0 0 14px; font-size: clamp(32px, 6vw, 52px); letter-spacing: -0.045em; line-height: 1; }
     .bento { display: grid; gap: 10px; }
-    .bento article { background: var(--card); border-radius: 18px; padding: 16px; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; }
+    .bento article { background: var(--card); border-radius: 18px; padding: 16px; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; transition: transform .35s ease; }
+    .bento article.wide { justify-content: space-between; }
+    .stage { height: 150px; }
+    .stage svg { display: block; width: 100% !important; height: 100% !important; }
     .bento article.wide { background: var(--ink); color: #fff; }
     .bento article.red { background: var(--red); color: #fff; }
     .bento p { margin: 6px 0 0; color: var(--muted); }
     .bento .wide p, .bento .red p { color: rgba(255,255,255,.82); }
     .bento h3 { margin: 0; font-size: 24px; letter-spacing: -0.03em; }
     .list { display: grid; }
-    .list a { display: grid; grid-template-columns: 64px 1fr auto; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid #e5dfd4; }
+    .list a { display: grid; grid-template-columns: 64px 1fr auto; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid #e5dfd4; transition: transform .25s ease; }
     .tag { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
     .list strong { font-size: clamp(18px, 3vw, 28px); letter-spacing: -0.03em; }
     .list em { font-style: normal; color: var(--muted); }
@@ -68,7 +73,19 @@
     footer { padding: 10px 0 28px; color: var(--muted); font-size: 13px; }
     .dock { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 50; display: grid; grid-template-columns: 1fr 1.3fr; gap: 8px; }
     @keyframes reel { to { transform: translateX(-50%); } }
-    @media (prefers-reduced-motion: reduce) { .reel-track { animation: none; } }
+    @keyframes rise { from { opacity: 0; transform: translateY(16px); } }
+    @keyframes draw { from { transform: scaleX(0); } }
+    html.motion .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s ease, transform .6s ease; }
+    html.motion .reveal.in { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: no-preference) {
+      .hero-copy, .sheet { animation: rise .75s cubic-bezier(.2,.7,.2,1) both; }
+      .sheet { animation-delay: .12s; }
+      .hero-copy h1::after { animation: draw .55s .3s cubic-bezier(.2,.7,.2,1) both; }
+    }
+    @media (hover: hover) {
+      .btn:hover { transform: translateY(-2px); }
+    }
+    @media (prefers-reduced-motion: reduce) { .reel-track, .bento article, .list a, .btn { animation: none; transition: none; } }
     @media (min-width: 900px) {
       body { margin-bottom: 0; }
       .nav-links { display: flex; }
@@ -78,6 +95,8 @@
       .row { grid-template-columns: 1fr 1fr; }
       .bento { grid-template-columns: 1.4fr 1fr 1fr; }
       .bento article.wide { grid-row: span 2; }
+      .bento article:hover { transform: translateY(-6px); }
+      .list a:hover { transform: translateX(6px); }
       .list a:hover strong { color: var(--red); }
     }
   </style>
@@ -105,9 +124,9 @@
         <h1>The interior, handled.</h1>
         <p class="lede">Drywall, framing, insulation and finish for commercial buildings, multifamily projects and homes. Family-owned. One office. One standard.</p>
         <div class="stats">
-          <div><b>20</b><span>Years</span></div>
-          <div><b>3</b><span>Sectors</span></div>
-          <div><b>1</b><span>Crew to call</span></div>
+          <div><b data-count="20">20</b><span>Years</span></div>
+          <div><b data-count="3">3</b><span>Sectors</span></div>
+          <div><b data-count="1">1</b><span>Crew to call</span></div>
         </div>
       </div>
       <form class="sheet" id="estimate" data-quote>
@@ -137,26 +156,27 @@
     </div>
 
     <section id="services">
-      <h2>What we put on the building.</h2>
+      <h2 class="reveal">What we put on the building.</h2>
       <div class="bento">
-        <article class="wide">
+        <article class="wide reveal">
+          <div class="stage" data-lottie="assets/lottie/layers.json" aria-hidden="true"></div>
           <p class="kicker">Primary work</p>
           <h3>Commercial &amp; multifamily interiors in Edmonton.</h3>
           <p>Apartments, multi-unit buildings and commercial rooms. We plan the sequence and keep framing, board, insulation and finish together.</p>
         </article>
-        <article>
+        <article class="reveal">
           <h3>Drywall &amp; framing</h3>
           <p>Steel studs, boarding, fire-rated walls and DensGlass when the spec calls for it.</p>
         </article>
-        <article>
+        <article class="reveal">
           <h3>Insulation</h3>
           <p>Walls, attics, blown-in and spray foam.</p>
         </article>
-        <article>
+        <article class="reveal">
           <h3>Finish</h3>
           <p>Taping, ceiling texture, paint and T-bar.</p>
         </article>
-        <article class="red">
+        <article class="red reveal">
           <h3>Homes, still.</h3>
           <p>New builds, basements and garages. The work the company was founded on in 2006.</p>
         </article>
@@ -164,8 +184,8 @@
     </section>
 
     <section id="work">
-      <h2>Names already on the schedule.</h2>
-      <div class="list">
+      <h2 class="reveal">Names already on the schedule.</h2>
+      <div class="list reveal">
         <a href="#estimate"><span class="tag">Now</span><strong>Gill Manor</strong><em>Gill Built</em></a>
         <a href="#estimate"><span class="tag">Now</span><strong>Baldwin Estates</strong><em>Zat Enterprises</em></a>
         <a href="#estimate"><span class="tag">Now</span><strong>Kingsway Professional Center</strong><em>KNN</em></a>
@@ -181,7 +201,7 @@
     </section>
 
     <section id="answers">
-      <h2>Before you call.</h2>
+      <h2 class="reveal">Before you call.</h2>
       <details open>
         <summary>What should I send for a price?</summary>
         <p>Address or site name, residential / multifamily / commercial, and the stages: framing, board, insulation, taping, texture, paint, ceilings.</p>
@@ -200,7 +220,7 @@
       </details>
     </section>
 
-    <section class="close">
+    <section class="close reveal">
       <a class="btn" href="#estimate">Free estimate</a>
       <a class="btn ink" href="tel:+17802635193">Call 780-263-5193</a>
       <a href="mailto:office@akdrywall.ca">office@akdrywall.ca</a>
@@ -211,6 +231,8 @@
     <a class="btn ink" href="tel:+17802635193">Call</a>
     <a class="btn" href="#estimate">Free estimate</a>
   </div>
+  <script src="assets/lottie.min.js"></script>
+  <script src="assets/motion.js"></script>
   <script src="assets/quote.js"></script>
 </body>
 </html>
