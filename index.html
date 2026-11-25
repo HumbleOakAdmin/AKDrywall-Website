@@ -48,7 +48,8 @@
     .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 0 16px; border-radius: 999px; background: var(--red); color: #fff; text-decoration: none; font-weight: 700; border: 0; cursor: pointer; font: inherit; }
     .btn.dark { background: var(--ink); }
     .btn.ghost { background: #fff; color: var(--ink); border: 1px solid #cfd3d8; }
-    .hero { display: grid; gap: 22px; padding: 28px 0 8px; }
+    [id] { scroll-margin-top: 112px; }
+    .hero { display: grid; gap: 16px; padding: 16px 0 0; }
     .kicker { margin: 0 0 8px; color: var(--red); font-size: 13px; font-weight: 700; }
     h1 { margin: 0; font-size: clamp(34px, 8vw, 58px); line-height: 1.02; letter-spacing: -0.035em; }
     .lede { margin: 12px 0 0; color: var(--muted); font-size: 17px; max-width: 46ch; }
@@ -58,11 +59,11 @@
     .card h2 { margin: 0 0 12px; font-size: 20px; letter-spacing: -0.02em; }
     label { display: grid; gap: 4px; font-size: 13px; font-weight: 700; margin-bottom: 8px; }
     input, select, textarea { width: 100%; border: 1px solid #d5d8de; border-radius: 12px; padding: 12px; font: inherit; background: #fff; color: var(--ink); }
-    textarea { min-height: 88px; resize: vertical; }
+    textarea { min-height: 72px; resize: vertical; }
     .trap { position: absolute; left: -9999px; }
     .fine, .note { color: var(--muted); font-size: 13px; font-weight: 500; }
     .quote-note { margin: 0; padding: 14px; background: #fff; border-radius: 12px; font-weight: 700; }
-    section { padding: 28px 0; }
+    section { padding: 16px 0; }
     h2.sec { margin: 0 0 6px; font-size: clamp(28px, 5vw, 40px); letter-spacing: -0.03em; }
     .sec-note { margin: 0 0 14px; color: var(--muted); }
     .services { display: grid; gap: 10px; }
@@ -77,7 +78,7 @@
     .paths p { margin: 0; color: #c9cdd3; }
     .paths article:last-child p { color: var(--muted); }
     .jobs { display: grid; gap: 8px; }
-    .job { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--line); }
+    .job { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); }
     .pill { font-size: 12px; font-weight: 700; border-radius: 999px; padding: 4px 8px; background: var(--paper); }
     .pill.now { background: #ffe8ea; color: #9d1520; }
     .pill.next { background: #e8eefc; color: #1d3f86; }
@@ -94,8 +95,9 @@
     @media (min-width: 800px) {
       body { padding-bottom: 0; }
       .dock { display: none; }
-      .hero { grid-template-columns: 1.15fr .85fr; align-items: start; padding-top: 48px; gap: 40px; }
-      .services { grid-template-columns: 1fr 1fr; }
+      .hero { grid-template-columns: 1.15fr .85fr; align-items: start; padding-top: 20px; gap: 28px; }
+      .services { grid-template-columns: 1fr 1fr 1fr; }
+      .jobs { grid-template-columns: 1fr 1fr; column-gap: 28px; }
       .paths { grid-template-columns: 1.3fr .7fr; }
       .card { padding: 22px; }
     }
@@ -108,7 +110,7 @@
     <a href="option-2.html">Option 2</a>
   </nav>
   <header class="wrap bar">
-    <a class="brand" href="index.html"><img src="assets/logo.png" alt="">A&amp;K Drywall</a>
+    <a class="brand" href="index.html"><img src="assets/logo.png" alt="A&amp;K Drywall">A&amp;K Drywall</a>
     <div class="bar-actions">
       <a class="call" href="tel:+17802635193">780-263-5193</a>
       <a class="btn" href="#estimate">Free estimate</a>
@@ -135,7 +137,7 @@
           <select name="type"><option>Residential</option><option>Commercial</option><option>Multifamily</option><option>Other</option></select>
         </label>
         <label>What do you need? *<textarea name="details" required placeholder="Address, size, and the scopes: board, insulation, taping, paint..."></textarea></label>
-        <label class="trap">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label>
+        <label class="trap" aria-hidden="true">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label>
         <button class="btn" type="submit">Request estimate</button>
         <p class="fine">Or call <a href="tel:+17802635193">780-263-5193</a>. This preview does not send the form.</p>
       </form>
@@ -154,7 +156,7 @@
       </div>
     </section>
 
-    <section>
+    <section id="sectors">
       <h2 class="sec">Who the work is for</h2>
       <div class="paths">
         <article>
