@@ -4,122 +4,99 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#f4f1ea">
+  <meta name="theme-color" content="#f3efe6">
   <meta name="description" content="A&K Drywall is Edmonton’s family-owned interior systems contractor. Drywall, steel framing, insulation and finishes for commercial, multifamily and residential projects since 2006.">
   <title>A&amp;K Drywall | Edmonton Interior Systems · Option 2</title>
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/version-nav.css">
   <style>
-    :root { --ink:#171410; --red:#e23b2f; --sand:#f4f1ea; --card:#fffdf8; --muted:#5f584f; }
+    :root { --ink:#1c1915; --muted:#6d655c; --line:rgba(28,25,21,.14); --red:#c8372d; --paper:#f3efe6; --card:#faf7f1; }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0 0 78px; background: var(--sand); color: var(--ink); font: 16px/1.5 "Plus Jakarta Sans", Arial, sans-serif; }
+    body { margin: 0 0 84px; background: var(--paper); color: var(--ink); font: 17px/1.5 "Instrument Sans", Arial, sans-serif; }
     a { color: inherit; text-decoration: none; }
     img { display: block; max-width: 100%; }
     .wrap { width: 85vw; margin: 0 auto; }
-    [id] { scroll-margin-top: 112px; }
-    header.nav { position: sticky; top: 38px; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 16px; width: 100%; min-height: 68px; padding-inline: 7.5vw; background: #fffdf8; border-bottom: 1px solid #e5dfd4; box-shadow: 0 8px 20px rgba(23,20,16,.06); }
-    .rail { position: absolute; left: 0; right: 0; bottom: 0; height: 2px; pointer-events: none; }
+    [id] { scroll-margin-top: 120px; }
+    header.nav { position: sticky; top: 38px; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; min-height: 72px; padding-inline: 7.5vw; background: var(--paper); border-bottom: 1px solid var(--line); }
+    .rail { position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; }
     .rail span { display: block; height: 100%; width: 0; background: var(--red); }
-    .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; letter-spacing: -0.03em; }
-    .brand img { width: 42px; height: 42px; object-fit: contain; }
-    .nav-links { display: none; gap: 16px; font-weight: 600; font-size: 14px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 46px; padding: 0 16px; border-radius: 999px; background: var(--red); color: #fff; font-weight: 700; border: 0; cursor: pointer; font: inherit; transition: transform .2s ease, filter .2s ease; }
-    .btn.ink { background: var(--ink); }
-    .hero { position: relative; display: grid; gap: 18px; padding-bottom: 10px; }
-    .hero > .glow { position: absolute; z-index: 0; width: 340px; height: 340px; border-radius: 50%; background: radial-gradient(circle, rgba(226,59,47,.22), transparent 68%); filter: blur(6px); pointer-events: none; right: -40px; top: -80px; }
-    .hero > .glow.two { width: 220px; height: 220px; left: 8%; right: auto; bottom: 10px; top: auto; background: radial-gradient(circle, rgba(23,20,16,.08), transparent 70%); }
-    .hero > :not(.glow) { position: relative; z-index: 1; }
-    .hero-copy h1 { margin: 8px 0; font-size: clamp(42px, 11vw, 84px); line-height: .92; letter-spacing: -0.055em; }
-    .hero-copy h1 span { display: block; overflow: hidden; }
-    .hero-copy h1 i { display: block; font-style: normal; }
-    .kicker { margin: 0; font-weight: 700; color: var(--red); }
-    .lede { margin: 0; max-width: 38ch; color: var(--muted); font-size: 18px; }
-    .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 16px; }
-    .stats div { background: var(--card); border-radius: 16px; padding: 12px; }
-    .stats b { display: block; font-size: 22px; letter-spacing: -0.04em; }
-    .stats span { color: var(--muted); font-size: 12px; font-weight: 600; }
-    .sheet { background: var(--card); border-radius: 28px; padding: 18px; box-shadow: 0 20px 50px rgba(23,20,16,.06); }
-    .sheet-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
-    .sheet h2 { margin: 0; font-size: 26px; letter-spacing: -0.04em; }
-    .sheet-head { margin-bottom: 12px; }
-    .seal { width: 54px; height: 54px; flex: none; }
-    label { display: grid; gap: 4px; font-size: 12px; font-weight: 700; margin-bottom: 8px; }
-    input, select, textarea { width: 100%; border: 1px solid #e4ddd2; background: #fff; border-radius: 12px; padding: 12px; font: inherit; }
-    .row { display: grid; gap: 8px; }
-    textarea { min-height: 84px; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 500; letter-spacing: -0.03em; }
+    .brand img { width: 36px; height: 36px; object-fit: contain; }
+    .nav-links { display: none; gap: 22px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
+    .phone { font-size: 14px; letter-spacing: .04em; }
+    .hero { min-height: calc(100svh - 112px); display: grid; align-content: end; gap: 28px; padding: 28px 0 36px; }
+    .kicker { margin: 0 0 18px; color: var(--red); font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+    h1 { margin: 0; max-width: 9ch; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(64px, 8.4vw, 118px); line-height: .86; letter-spacing: -0.045em; }
+    h1 em { font-style: italic; }
+    .lede { max-width: 36ch; margin: 22px 0 0; color: var(--muted); font-size: 18px; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--ink); background: var(--ink); color: #faf7f1; font: 500 14px/1 "Instrument Sans", sans-serif; letter-spacing: .04em; cursor: pointer; }
+    .btn.quiet { background: transparent; color: var(--ink); }
+    .plan { width: min(100%, 520px); justify-self: end; color: var(--ink); }
+    .plan path { fill: none; stroke: currentColor; stroke-width: 1.25; }
+    .plan .accent { stroke: var(--red); }
+    .index { display: grid; border-top: 1px solid var(--line); }
+    .index a, .index article { display: grid; gap: 6px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+    .num { color: var(--red); font-size: 12px; letter-spacing: .16em; }
+    .index h3, .work strong { margin: 0; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(32px, 4vw, 52px); letter-spacing: -0.04em; line-height: 1; }
+    .index p, .fine { margin: 0; color: var(--muted); }
+    section { padding: 64px 0; }
+    h2 { margin: 0 0 28px; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 68px); letter-spacing: -0.04em; line-height: .95; }
+    .work a { display: grid; grid-template-columns: 72px 1fr; gap: 8px 18px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); }
+    .work strong { font-size: clamp(28px, 3vw, 42px); }
+    .status { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--red); }
+    .work em { grid-column: 2; font-style: normal; color: var(--muted); font-size: 14px; }
+    .estimate { display: grid; gap: 28px; padding: 28px; background: var(--card); border: 1px solid var(--line); border-radius: 28px; }
+    form h2 { margin-bottom: 8px; }
+    label { display: grid; gap: 6px; margin-top: 14px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
+    input, select, textarea { width: 100%; border: 0; border-bottom: 1px solid var(--line); background: transparent; padding: 12px 0; font: 16px/1.4 "Instrument Sans", sans-serif; color: inherit; border-radius: 0; }
+    textarea { min-height: 90px; resize: vertical; }
+    .row { display: grid; gap: 0 18px; }
     .trap { position: absolute; left: -9999px; }
-    .fine { color: var(--muted); font-size: 13px; }
-    .quote-note { font-weight: 700; }
-    .reel { overflow: hidden; margin: 18px 0; border-block: 1px solid #e5dfd4; }
-    .reel-track { display: flex; gap: 28px; width: max-content; padding: 8px 0; animation: reel 26s linear infinite; font-weight: 700; letter-spacing: -0.02em; }
-    .reel-track.back { animation-duration: 38s; animation-direction: reverse; opacity: .45; }
-    .reel:hover .reel-track { animation-play-state: paused; }
-    .reel span::before { content: ""; display: inline-block; width: 7px; height: 7px; margin-right: 28px; border-radius: 50%; background: var(--red); }
-    section { padding: 18px 0; }
-    h2 { margin: 0 0 14px; font-size: clamp(32px, 6vw, 52px); letter-spacing: -0.045em; line-height: 1; }
-    .bento { display: grid; gap: 10px; }
-    .bento article { position: relative; overflow: hidden; background: var(--card); border-radius: 18px; padding: 16px; min-height: 0; display: flex; flex-direction: column; justify-content: flex-end; transition: transform .45s cubic-bezier(.2,.7,.2,1), box-shadow .45s ease; }
-    .bento article.wide { justify-content: space-between; }
-    .bento article::after { content: ""; position: absolute; inset: 0; background: linear-gradient(115deg, transparent 35%, rgba(255,255,255,.35) 50%, transparent 65%); transform: translateX(-130%); pointer-events: none; }
-    .stage { height: 210px; }
-    .hero-stage { height: 250px; margin: 8px 0 4px; }
-    .mark { height: 92px; }
-    .stage svg, .mark svg, .seal svg { display: block; width: 100% !important; height: 100% !important; }
-    .bento article.wide { background: var(--ink); color: #fff; }
-    .bento article.red { background: var(--red); color: #fff; }
-    .bento p { margin: 6px 0 0; color: var(--muted); }
-    .bento .wide p, .bento .red p { color: rgba(255,255,255,.82); }
-    .bento h3 { margin: 0; font-size: 24px; letter-spacing: -0.03em; }
-    .list { display: grid; }
-    .list a { display: grid; grid-template-columns: 64px 1fr auto; gap: 10px; align-items: center; padding: 10px 0; border-bottom: 1px solid #e5dfd4; transition: transform .25s ease; }
-    .tag { font-size: 12px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--red); }
-    .list strong { font-size: clamp(18px, 3vw, 28px); letter-spacing: -0.03em; }
-    .list em { font-style: normal; color: var(--muted); }
-    details { background: var(--card); border-radius: 16px; padding: 12px 14px; margin-bottom: 8px; }
-    summary { font-weight: 700; cursor: pointer; }
-    details p { color: var(--muted); margin: 8px 0 0; }
-    .close { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
-    footer { padding: 10px 0 28px; color: var(--muted); font-size: 13px; }
+    .quote-note { font-family: "Instrument Serif", Georgia, serif; font-size: 32px; line-height: 1.15; }
+    details { border-bottom: 1px solid var(--line); padding: 16px 0; }
+    summary { cursor: pointer; font-size: 18px; }
+    details p { color: var(--muted); }
+    .close { display: grid; gap: 8px; padding-bottom: 28px; }
+    .close a { text-decoration: underline; text-underline-offset: 3px; }
+    footer { padding: 0 0 20px; color: var(--muted); font-size: 13px; }
     .dock { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 50; display: grid; grid-template-columns: 1fr 1.3fr; gap: 8px; }
-    @keyframes reel { to { transform: translateX(-50%); } }
-    @keyframes rise { from { opacity: 0; transform: translateY(22px); } }
-    @keyframes lift { from { transform: translateY(115%); } }
-    @keyframes drift { 50% { transform: translate3d(-18px, 16px, 0) scale(1.06); } }
-    @keyframes sheen { to { transform: translateX(130%); } }
-    html.motion .reveal { opacity: 0; transform: translateY(28px) scale(.98); transition: opacity .7s cubic-bezier(.16,1,.3,1), transform .7s cubic-bezier(.16,1,.3,1); }
-    html.motion .reveal.in { opacity: 1; transform: none; }
-    html.motion .reveal.in::after { animation: sheen 1.15s .15s ease both; }
     @media (prefers-reduced-motion: no-preference) {
-      .glow { animation: drift 11s ease-in-out infinite; }
-      .glow.two { animation: drift 14s ease-in-out infinite reverse; }
-      .hero-copy, .sheet { animation: rise .9s cubic-bezier(.16,1,.3,1) both; }
-      .sheet { animation-delay: .15s; }
-      .hero-copy h1 i { animation: lift .9s cubic-bezier(.16,1,.3,1) both; }
-      .hero-copy h1 span:nth-child(2) i { animation-delay: .12s; }
-      .stats div { animation: rise .7s cubic-bezier(.16,1,.3,1) both; }
-      .stats div:nth-child(2) { animation-delay: .12s; }
-      .stats div:nth-child(3) { animation-delay: .24s; }
+      .plan path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: trace 1.6s cubic-bezier(.65,0,.35,1) forwards; }
+      .plan path:nth-child(2) { animation-delay: .15s; }
+      .plan path:nth-child(3) { animation-delay: .28s; }
+      .plan path:nth-child(4) { animation-delay: .4s; }
+      .plan path:nth-child(5) { animation-delay: .55s; }
+      .plan path:nth-child(6) { animation-delay: .7s; }
+      h1, .lede, .actions { animation: rise .9s cubic-bezier(.16,1,.3,1) both; }
+      .lede { animation-delay: .08s; }
+      .actions { animation-delay: .16s; }
+      .index a, .work a { transition: padding .35s ease; }
+      .index a:hover h3, .work a:hover strong { color: var(--red); }
     }
+    @keyframes trace { to { stroke-dashoffset: 0; } }
+    @keyframes rise { from { opacity: 0; transform: translateY(18px); } }
+    html.motion .reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.16,1,.3,1), transform .8s cubic-bezier(.16,1,.3,1); }
+    html.motion .reveal.in { opacity: 1; transform: none; }
     @media (hover: hover) {
+      .btn { transition: transform .25s ease, background .25s ease; }
       .btn:hover { transform: translateY(-2px); }
+      .index a:hover, .work a:hover { padding-left: 10px; }
     }
-    @media (prefers-reduced-motion: reduce) { .reel-track, .bento article, .list a, .btn { animation: none; transition: none; } }
     @media (min-width: 900px) {
       body { margin-bottom: 0; }
       .nav-links { display: flex; }
       .dock { display: none; }
-      .hero { grid-template-columns: 1.15fr .85fr; gap: 28px; align-items: stretch; padding-top: 18px; }
-      .sheet { padding: 26px; }
+      .hero { grid-template-columns: 1.05fr .95fr; align-items: end; }
+      .index { grid-template-columns: 1fr 1fr; }
+      .index a:nth-child(odd) { padding-right: 40px; }
+      .index a:nth-child(even) { padding-left: 40px; border-left: 1px solid var(--line); }
+      .estimate { grid-template-columns: .8fr 1.2fr; gap: 48px; padding: 48px; align-items: start; }
       .row { grid-template-columns: 1fr 1fr; }
-      .bento { grid-template-columns: 1.4fr 1fr 1fr; }
-      .bento article.wide { grid-row: span 2; }
-      .bento article:hover { transform: translateY(-8px); box-shadow: 0 18px 40px rgba(23,20,16,.1); }
-      .list a:hover { transform: translateX(6px); }
-      .list a:hover strong { color: var(--red); }
     }
   </style>
 </head>
@@ -130,145 +107,121 @@
     <a href="option-2.html" aria-current="page">Option 2</a>
   </nav>
   <header class="nav">
-    <a class="brand" href="option-2.html"><img src="assets/logo.png" alt="A&amp;K Drywall">A&amp;K</a>
+    <a class="brand" href="option-2.html"><img src="assets/logo.png" alt="A&amp;K Drywall">A&amp;K Drywall</a>
     <nav class="nav-links" aria-label="Page">
       <a href="#services">Services</a>
       <a href="#work">Projects</a>
-      <a href="#answers">Answers</a>
+      <a href="#estimate">Estimate</a>
     </nav>
-    <a class="btn ink" href="tel:+17802635193">780-263-5193</a>
+    <a class="phone" href="tel:+17802635193">780-263-5193</a>
     <div class="rail" aria-hidden="true"><span></span></div>
   </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="glow" aria-hidden="true"></div>
-      <div class="glow two" aria-hidden="true"></div>
-      <div class="hero-copy">
-        <p class="kicker">Edmonton · Est. 2006</p>
-        <h1><span><i>The interior,</i></span><span><i>handled.</i></span></h1>
-        <p class="lede">Drywall, framing, insulation and finish for commercial buildings, multifamily projects and homes. Family-owned. One office. One standard.</p>
-        <div class="hero-stage" data-lottie="assets/lottie/atelier.json" data-drift aria-hidden="true"></div>
-        <div class="stats">
-          <div><b data-count="20">20</b><span>Years</span></div>
-          <div><b data-count="3">3</b><span>Sectors</span></div>
-          <div><b data-count="1">1</b><span>Crew to call</span></div>
+  <main>
+    <section class="hero wrap">
+      <div>
+        <p class="kicker">Edmonton · Drywall &amp; insulation · Since 2006</p>
+        <h1>Finished interiors, <em>from the studs out.</em></h1>
+        <p class="lede">A&amp;K Drywall frames, boards, insulates and finishes commercial buildings, multifamily projects and homes. Family-owned. One office. One standard.</p>
+        <div class="actions">
+          <a class="btn" href="#estimate">Request an estimate</a>
+          <a class="btn quiet" href="tel:+17802635193">780-263-5193</a>
         </div>
       </div>
-      <form class="sheet" id="estimate" data-quote>
-        <div class="sheet-head">
-          <h2>Free estimate</h2>
-          <div class="seal" data-lottie="assets/lottie/seal.json" aria-hidden="true"></div>
-        </div>
-        <div class="row">
-          <label>Name *<input name="name" required autocomplete="name"></label>
-          <label>Phone *<input name="phone" type="tel" required autocomplete="tel"></label>
-        </div>
-        <div class="row">
-          <label>Project
-            <select name="type"><option>Commercial</option><option>Multifamily</option><option>Residential</option><option>Other</option></select>
-          </label>
-          <label>Email<input name="email" type="email" autocomplete="email"></label>
-        </div>
-        <label>Scope *<textarea name="details" required placeholder="Where is the building, and which stages do you need?"></textarea></label>
-        <label class="trap" aria-hidden="true">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label>
-        <button class="btn" type="submit">Get my estimate</button>
-        <p class="fine">This preview stays on the page. The live office is office@akdrywall.ca.</p>
-      </form>
+      <svg class="plan" viewBox="0 0 560 460" aria-hidden="true">
+        <path pathLength="1" d="M28 28H532V432H28Z"/>
+        <path pathLength="1" d="M28 118H532"/>
+        <path pathLength="1" d="M168 118V432M392 118V432"/>
+        <path class="accent" pathLength="1" d="M214 196H346V360H214Z"/>
+        <path pathLength="1" d="M280 196V360"/>
+        <path pathLength="1" d="M430 168H496V230H430Z"/>
+      </svg>
     </section>
 
-    <div class="reel" aria-hidden="true">
-      <div class="reel-track">
-        <span>Drywall</span><span>Steel framing</span><span>Insulation</span><span>Spray foam</span><span>Taping</span><span>Texture</span><span>Paint</span><span>T-bar</span><span>Fire-rated</span><span>Concrete lifting</span>
-        <span>Drywall</span><span>Steel framing</span><span>Insulation</span><span>Spray foam</span><span>Taping</span><span>Texture</span><span>Paint</span><span>T-bar</span><span>Fire-rated</span><span>Concrete lifting</span>
-      </div>
-      <div class="reel-track back">
-        <span>Board</span><span>Steel studs</span><span>Spray foam</span><span>Texture</span><span>Paint</span><span>T-bar</span><span>Fire-rated</span><span>DensGlass</span><span>Basements</span><span>Concrete lifting</span>
-        <span>Board</span><span>Steel studs</span><span>Spray foam</span><span>Texture</span><span>Paint</span><span>T-bar</span><span>Fire-rated</span><span>DensGlass</span><span>Basements</span><span>Concrete lifting</span>
-      </div>
-    </div>
-
-    <section id="services">
-      <h2 class="reveal">What we put on the building.</h2>
-      <div class="bento">
-        <article class="wide reveal">
-          <div class="stage" data-lottie="assets/lottie/layers.json" data-drift aria-hidden="true"></div>
-          <p class="kicker">Primary work</p>
-          <h3>Commercial &amp; multifamily interiors in Edmonton.</h3>
-          <p>Apartments, multi-unit buildings and commercial rooms. We plan the sequence and keep framing, board, insulation and finish together.</p>
-        </article>
-        <article class="reveal">
-          <div class="mark" data-lottie="assets/lottie/studs.json" aria-hidden="true"></div>
-          <h3>Drywall &amp; framing</h3>
-          <p>Steel studs, boarding, fire-rated walls and DensGlass when the spec calls for it.</p>
-        </article>
-        <article class="reveal">
-          <div class="mark" data-lottie="assets/lottie/waves.json" aria-hidden="true"></div>
-          <h3>Insulation</h3>
-          <p>Walls, attics, blown-in and spray foam.</p>
-        </article>
-        <article class="reveal">
-          <div class="mark" data-lottie="assets/lottie/coat.json" aria-hidden="true"></div>
-          <h3>Finish</h3>
-          <p>Taping, ceiling texture, paint and T-bar.</p>
-        </article>
-        <article class="red reveal">
-          <div class="mark" data-lottie="assets/lottie/stack.json" aria-hidden="true"></div>
-          <h3>Homes, still.</h3>
-          <p>New builds, basements and garages. The work the company was founded on in 2006.</p>
-        </article>
+    <section class="wrap" id="services">
+      <h2 class="reveal">What the crew puts on the building.</h2>
+      <div class="index">
+        <a class="reveal" href="#estimate"><span class="num">01</span><h3>Steel stud framing</h3><p>Partitions and commercial build-outs, ready for board.</p></a>
+        <a class="reveal" href="#estimate"><span class="num">02</span><h3>Drywall boarding</h3><p>Walls and ceilings for homes, apartments and commercial rooms.</p></a>
+        <a class="reveal" href="#estimate"><span class="num">03</span><h3>Insulation</h3><p>Walls, attics, blown-in and spray foam where it is specified.</p></a>
+        <a class="reveal" href="#estimate"><span class="num">04</span><h3>Finish</h3><p>Taping, ceiling texture, paint, T-bar, fire-rated assemblies, DensGlass and concrete lifting.</p></a>
       </div>
     </section>
 
-    <section id="work">
-      <h2 class="reveal">Names already on the schedule.</h2>
-      <div class="list">
-        <a class="reveal" href="#estimate"><span class="tag">Now</span><strong>Gill Manor</strong><em>Gill Built</em></a>
-        <a class="reveal" href="#estimate"><span class="tag">Now</span><strong>Baldwin Estates</strong><em>Zat Enterprises</em></a>
-        <a class="reveal" href="#estimate"><span class="tag">Now</span><strong>Kingsway Professional Center</strong><em>KNN</em></a>
-        <a class="reveal" href="#estimate"><span class="tag">Now</span><strong>Southern Village</strong><em>Underway</em></a>
-        <a class="reveal" href="#estimate"><span class="tag">Next</span><strong>McKernan Apartments</strong><em>Westrich</em></a>
-        <a class="reveal" href="#estimate"><span class="tag">Next</span><strong>91st</strong><em>HASCO</em></a>
-        <a class="reveal" href="#estimate"><span class="tag">Done</span><strong>Westpointe Greens</strong><em>Seymour Pacific</em></a>
-        <a class="reveal" href="#estimate"><span class="tag">Done</span><strong>Jardin Apartments</strong><em>Seymour Pacific</em></a>
-        <a class="reveal" href="#estimate"><span class="tag">Done</span><strong>Gill Villa</strong><em>Gill Built</em></a>
-        <a class="reveal" href="#estimate"><span class="tag">Done</span><strong>Gill Estates</strong><em>Gill Built</em></a>
-        <a class="reveal" href="#estimate"><span class="tag">Done</span><strong>10021 83rd Ave</strong><em>Lakeview</em></a>
+    <section class="wrap work" id="work">
+      <h2 class="reveal">Selected work.</h2>
+      <a class="reveal" href="#estimate"><span class="status">Now</span><strong>Gill Manor</strong><em>Gill Built</em></a>
+      <a class="reveal" href="#estimate"><span class="status">Now</span><strong>Baldwin Estates</strong><em>Zat Enterprises</em></a>
+      <a class="reveal" href="#estimate"><span class="status">Now</span><strong>Kingsway Professional Center</strong><em>KNN</em></a>
+      <a class="reveal" href="#estimate"><span class="status">Now</span><strong>Southern Village</strong><em>Underway</em></a>
+      <a class="reveal" href="#estimate"><span class="status">Next</span><strong>McKernan Apartments</strong><em>Westrich</em></a>
+      <a class="reveal" href="#estimate"><span class="status">Next</span><strong>91st</strong><em>HASCO</em></a>
+      <a class="reveal" href="#estimate"><span class="status">Done</span><strong>Westpointe Greens</strong><em>Seymour Pacific</em></a>
+      <a class="reveal" href="#estimate"><span class="status">Done</span><strong>Jardin Apartments</strong><em>Seymour Pacific</em></a>
+      <a class="reveal" href="#estimate"><span class="status">Done</span><strong>Gill Villa</strong><em>Gill Built</em></a>
+      <a class="reveal" href="#estimate"><span class="status">Done</span><strong>Gill Estates</strong><em>Gill Built</em></a>
+      <a class="reveal" href="#estimate"><span class="status">Done</span><strong>10021 83rd Ave</strong><em>Lakeview</em></a>
+    </section>
+
+    <section class="wrap">
+      <div class="estimate reveal" id="estimate">
+        <div>
+          <p class="kicker">Free estimate</p>
+          <h2>Tell us the building.</h2>
+          <p class="fine">Commercial and multifamily are the lead work. Homes are where A&amp;K started, founded in 2006 by Joga Dhothar and his brothers. His family has led the company for the last 10 years. Office at 5105 55 Ave, Edmonton.</p>
+        </div>
+        <form data-quote>
+          <div class="row">
+            <label>Name *<input name="name" required autocomplete="name"></label>
+            <label>Phone *<input name="phone" type="tel" required autocomplete="tel"></label>
+          </div>
+          <div class="row">
+            <label>Project
+              <select name="type"><option>Commercial</option><option>Multifamily</option><option>Residential</option><option>Other</option></select>
+            </label>
+            <label>Email<input name="email" type="email" autocomplete="email"></label>
+          </div>
+          <label>Scope *<textarea name="details" required placeholder="Address, size, and the stages you need."></textarea></label>
+          <label class="trap" aria-hidden="true">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label>
+          <div class="actions">
+            <button class="btn" type="submit">Request estimate</button>
+          </div>
+          <p class="fine">This preview stays on the page. Call 780-263-5193 or 780-803-3626, or email office@akdrywall.ca.</p>
+        </form>
       </div>
     </section>
 
-    <section id="answers">
+    <section class="wrap" id="answers">
       <h2 class="reveal">Before you call.</h2>
       <details class="reveal" open>
-        <summary>What should I send for a price?</summary>
-        <p>Address or site name, residential / multifamily / commercial, and the stages: framing, board, insulation, taping, texture, paint, ceilings.</p>
+        <summary>Where do you work?</summary>
+        <p>Edmonton and surrounding communities. The office is at 5105 55 Ave.</p>
       </details>
       <details class="reveal">
-        <summary>Who am I hiring?</summary>
-        <p>A&amp;K Drywall, started in 2006 by Joga Dhothar and his brothers. His family has run it for the last 10 years. Office at 5105 55 Ave, Edmonton.</p>
+        <summary>A single scope, or the whole interior?</summary>
+        <p>Either. Board only, or framing, insulation, taping, texture and paint as one sequence with one contact.</p>
       </details>
       <details class="reveal">
-        <summary>Do you cover the surrounding area?</summary>
-        <p>Yes. Edmonton and surrounding communities. Call 780-263-5193 or 780-803-3626 and say where the site is.</p>
+        <summary>Who owns the company?</summary>
+        <p>Founded in 2006 by Joga Dhothar and his brothers. For the last 10 years his family has led the business.</p>
       </details>
       <details class="reveal">
-        <summary>Where are the safety documents?</summary>
-        <p>With the office. Ask when you send the scope and we’ll share what the project needs.</p>
+        <summary>How do I get safety credentials?</summary>
+        <p>Call the office. We share current safety information for the project you are bidding or running.</p>
       </details>
     </section>
 
-    <section class="close reveal">
-      <a class="btn" href="#estimate">Free estimate</a>
-      <a class="btn ink" href="tel:+17802635193">Call 780-263-5193</a>
-      <a href="mailto:office@akdrywall.ca">office@akdrywall.ca</a>
+    <section class="wrap close">
+      <p class="kicker">Office</p>
+      <h2>5105 55 Ave, Edmonton.</h2>
+      <p><a href="tel:+17802635193">780-263-5193</a> · <a href="tel:+17808033626">780-803-3626</a> · <a href="mailto:office@akdrywall.ca">office@akdrywall.ca</a></p>
     </section>
   </main>
   <footer class="wrap">© <span data-year></span> A&amp;K Drywall · Edmonton, Alberta</footer>
   <div class="dock">
-    <a class="btn ink" href="tel:+17802635193">Call</a>
-    <a class="btn" href="#estimate">Free estimate</a>
+    <a class="btn quiet" href="tel:+17802635193">Call</a>
+    <a class="btn" href="#estimate">Estimate</a>
   </div>
-  <script src="assets/lottie.min.js"></script>
   <script src="assets/motion.js"></script>
   <script src="assets/quote.js"></script>
 </body>
