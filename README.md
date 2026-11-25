@@ -4,9 +4,11 @@ Three GitHub Pages versions of the A&K Drywall site. They use the live company d
 
 ## Versions
 
-- `index.html` — Lite
-- `option-1.html` — Option 1
-- `option-2.html` — Option 2
+- [Lite](https://humbleoakadmin.github.io/AKDrywall-Website/) — tighter version of the current site
+- [Option 1](https://humbleoakadmin.github.io/AKDrywall-Website/option-1.html) — builder and homeowner paths
+- [Option 2](https://humbleoakadmin.github.io/AKDrywall-Website/option-2.html) — editorial layout
+
+Hard-refresh if an older layout is still cached. The pages are for review only.
 
 Older addresses (`about.html`, `services.html`, `projects.html`, `contact.html`, and the rest) redirect into Lite.
 

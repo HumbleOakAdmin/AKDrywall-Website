@@ -22,7 +22,7 @@
       return node.classList && node.classList.contains("reveal");
     });
     var index = siblings.indexOf(el);
-    el.style.transitionDelay = Math.min(index, 7) * 70 + "ms";
+    el.style.transitionDelay = Math.min(index, 5) * 60 + "ms";
   });
 
   if ("IntersectionObserver" in window) {
