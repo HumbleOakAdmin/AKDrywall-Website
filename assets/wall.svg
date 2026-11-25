@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 680" role="img" aria-label="Drywall sheets with taped joints">
+  <rect width="1200" height="680" fill="#e6dfd3"/>
+  <g fill="#f7f4ee" stroke="#c8bfb1" stroke-width="3">
+    <rect x="18" y="18" width="276" height="644"/>
+    <rect x="314" y="18" width="276" height="644"/>
+    <rect x="610" y="18" width="276" height="644"/>
+    <rect x="906" y="18" width="276" height="644"/>
+  </g>
+  <g stroke="#c8bfb1" stroke-width="3">
+    <path d="M18 340H294M314 340H590M610 340H886M906 340H1182"/>
+  </g>
+  <g fill="#d62231">
+    <rect x="302" y="18" width="14" height="644"/>
+    <rect x="314" y="333" width="276" height="14"/>
+  </g>
+  <g fill="#b7ad9e">
+    <g>
+      <circle cx="70" cy="90" r="3.2"/><circle cx="150" cy="90" r="3.2"/><circle cx="230" cy="90" r="3.2"/>
+      <circle cx="70" cy="210" r="3.2"/><circle cx="150" cy="210" r="3.2"/><circle cx="230" cy="210" r="3.2"/>
+      <circle cx="70" cy="450" r="3.2"/><circle cx="150" cy="450" r="3.2"/><circle cx="230" cy="450" r="3.2"/>
+      <circle cx="70" cy="570" r="3.2"/><circle cx="150" cy="570" r="3.2"/><circle cx="230" cy="570" r="3.2"/>
+    </g>
+    <g>
+      <circle cx="366" cy="90" r="3.2"/><circle cx="446" cy="90" r="3.2"/><circle cx="526" cy="90" r="3.2"/>
+      <circle cx="366" cy="210" r="3.2"/><circle cx="446" cy="210" r="3.2"/><circle cx="526" cy="210" r="3.2"/>
+      <circle cx="366" cy="450" r="3.2"/><circle cx="446" cy="450" r="3.2"/><circle cx="526" cy="450" r="3.2"/>
+      <circle cx="366" cy="570" r="3.2"/><circle cx="446" cy="570" r="3.2"/><circle cx="526" cy="570" r="3.2"/>
+    </g>
+    <g>
+      <circle cx="662" cy="90" r="3.2"/><circle cx="742" cy="90" r="3.2"/><circle cx="822" cy="90" r="3.2"/>
+      <circle cx="662" cy="210" r="3.2"/><circle cx="742" cy="210" r="3.2"/><circle cx="822" cy="210" r="3.2"/>
+      <circle cx="662" cy="450" r="3.2"/><circle cx="742" cy="450" r="3.2"/><circle cx="822" cy="450" r="3.2"/>
+      <circle cx="662" cy="570" r="3.2"/><circle cx="742" cy="570" r="3.2"/><circle cx="822" cy="570" r="3.2"/>
+    </g>
+    <g>
+      <circle cx="958" cy="90" r="3.2"/><circle cx="1038" cy="90" r="3.2"/><circle cx="1118" cy="90" r="3.2"/>
+      <circle cx="958" cy="210" r="3.2"/><circle cx="1038" cy="210" r="3.2"/><circle cx="1118" cy="210" r="3.2"/>
+      <circle cx="958" cy="450" r="3.2"/><circle cx="1038" cy="450" r="3.2"/><circle cx="1118" cy="450" r="3.2"/>
+      <circle cx="958" cy="570" r="3.2"/><circle cx="1038" cy="570" r="3.2"/><circle cx="1118" cy="570" r="3.2"/>
+    </g>
+  </g>
+</svg>

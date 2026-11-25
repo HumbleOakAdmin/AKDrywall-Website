@@ -50,6 +50,8 @@
     .btn.dark { background: var(--ink); }
     .btn.ghost { background: #fff; color: var(--ink); border: 1px solid #cfd3d8; }
     [id] { scroll-margin-top: 112px; }
+    .wall { margin: 0; border-radius: 20px; overflow: hidden; background: #e6dfd3; }
+    .wall img { width: 100%; height: 280px; object-fit: cover; }
     .hero { display: grid; gap: 16px; padding: 16px 0 0; }
     .kicker { margin: 0 0 8px; color: var(--red); font-size: 13px; font-weight: 700; }
     h1 { margin: 0; font-size: clamp(34px, 8vw, 58px); line-height: 1.02; letter-spacing: -0.035em; }
@@ -68,10 +70,12 @@
     h2.sec { margin: 0 0 6px; font-size: clamp(28px, 5vw, 40px); letter-spacing: -0.03em; }
     .sec-note { margin: 0 0 14px; color: var(--muted); }
     .services { display: grid; gap: 10px; }
-    .services a { display: block; text-decoration: none; background: var(--paper); border-radius: 16px; padding: 16px; }
-    .services a:hover { background: #eceef2; }
-    .services strong { display: block; font-size: 17px; margin-bottom: 4px; }
-    .services span { color: var(--muted); font-size: 14px; }
+    .services a { display: flex; align-items: flex-end; min-height: 132px; text-decoration: none; border-radius: 16px; padding: 16px; background:
+      linear-gradient(#d7d0c4, #d7d0c4) center / 2px 100% no-repeat,
+      linear-gradient(#d7d0c4, #d7d0c4) center / 100% 2px no-repeat,
+      #f3f1ec; }
+    .services a:hover { filter: brightness(.97); }
+    .services strong { display: block; font-size: 18px; }
     .paths { display: grid; gap: 10px; }
     .paths article { border-radius: 18px; padding: 18px; background: var(--ink); color: #fff; }
     .paths article:last-child { background: var(--paper); color: var(--ink); }
@@ -96,6 +100,8 @@
     @media (min-width: 800px) {
       body { padding-bottom: 0; }
       .dock { display: none; }
+      .wall { grid-column: 1 / -1; }
+      .wall img { height: 360px; }
       .hero { grid-template-columns: 1.15fr .85fr; align-items: start; padding-top: 20px; gap: 28px; }
       .services { grid-template-columns: 1fr 1fr 1fr; }
       .jobs { grid-template-columns: 1fr 1fr; column-gap: 28px; }
@@ -119,10 +125,11 @@
   </header>
   <main class="wrap">
     <section class="hero">
+      <figure class="wall"><img src="assets/wall.svg" alt="Drywall sheets with taped joints and screw heads"></figure>
       <div>
-        <p class="kicker">Edmonton &amp; surrounding communities</p>
-        <h1>Drywall, insulation and finishing, done by one crew.</h1>
-        <p class="lede">A&amp;K Drywall has been family-owned since 2006. We board, insulate and finish commercial buildings, multifamily projects and homes.</p>
+        <p class="kicker">Edmonton drywall</p>
+        <h1>Board, tape, finish.</h1>
+        <p class="lede">Family-owned since 2006. Homes, apartments and commercial rooms.</p>
         <ul class="trust">
           <li>20 years on site</li>
           <li>Est. 2006</li>
@@ -145,15 +152,14 @@
     </section>
 
     <section id="services">
-      <h2 class="sec">Services in Edmonton</h2>
-      <p class="sec-note">One company from the studs to the last coat. Open a scope, or tell us you only need one of them.</p>
+      <h2 class="sec">The work</h2>
       <div class="services">
-        <a href="#estimate"><strong>Drywall boarding</strong><span>Walls and ceilings for homes, apartments and commercial interiors.</span></a>
-        <a href="#estimate"><strong>Steel stud framing</strong><span>Partitions and commercial build-outs, ready for board.</span></a>
-        <a href="#estimate"><strong>Insulation &amp; spray foam</strong><span>Walls, attics, blown-in and spray foam where it is specified.</span></a>
-        <a href="#estimate"><strong>Taping, texture &amp; paint</strong><span>Finish the surface, including ceiling texture and interior paint.</span></a>
-        <a href="#estimate"><strong>Fire-rated &amp; DensGlass</strong><span>Rated assemblies, fire taping, and exterior sheathing when specified.</span></a>
-        <a href="#estimate"><strong>Ceilings &amp; site work</strong><span>T-bar, basements, garages, pre-board checks and concrete lifting.</span></a>
+        <a href="#estimate"><strong>Boarding</strong></a>
+        <a href="#estimate"><strong>Steel studs</strong></a>
+        <a href="#estimate"><strong>Insulation</strong></a>
+        <a href="#estimate"><strong>Tape &amp; texture</strong></a>
+        <a href="#estimate"><strong>Fire-rated</strong></a>
+        <a href="#estimate"><strong>Ceilings</strong></a>
       </div>
     </section>
 
@@ -162,18 +168,17 @@
       <div class="paths">
         <article>
           <h3>Commercial &amp; multifamily</h3>
-          <p>Apartments, multi-unit buildings and commercial interiors. Scheduling and one point of contact are part of the job.</p>
+          <p>Apartments and commercial rooms.</p>
         </article>
         <article>
           <h3>Residential</h3>
-          <p>New homes, builder programs and custom houses, from insulation through the final finish.</p>
+          <p>Homes, basements and garages.</p>
         </article>
       </div>
     </section>
 
     <section id="work">
-      <h2 class="sec">Recent and upcoming work</h2>
-      <p class="sec-note">Selected projects. Ask us which scopes we carried.</p>
+      <h2 class="sec">On the schedule</h2>
       <div class="jobs">
         <div class="job"><span class="pill">Past</span><div><b>Westpointe Greens</b><span>Seymour Pacific</span></div></div>
         <div class="job"><span class="pill">Past</span><div><b>Gill Villa</b><span>Gill Built</span></div></div>
