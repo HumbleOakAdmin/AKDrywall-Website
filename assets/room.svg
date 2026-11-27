@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 640" role="img" aria-label="A room with steel studs on one wall, taped drywall on the far wall, and a finished wall beside a stack of board">
+  <rect width="960" height="640" fill="#1a1815"/>
+  <polygon points="70,150 250,78 710,78 900,138" fill="#3a342c"/>
+  <polygon points="70,548 250,470 710,470 900,536" fill="#8d8376"/>
+  <polygon points="70,150 250,78 250,470 70,548" fill="#6d7a88"/>
+  <polygon points="710,78 900,138 900,536 710,470" fill="#f3eee4"/>
+  <rect x="250" y="78" width="460" height="392" fill="#f7f4ee"/>
+  <g stroke="#d2c9bb" stroke-width="3">
+    <path d="M403 78V470M556 78V470M250 274H710"/>
+  </g>
+  <g fill="#c8372d">
+    <rect x="397" y="78" width="12" height="392"/>
+    <rect x="250" y="268" width="159" height="12"/>
+  </g>
+  <g fill="#c4baac">
+    <circle cx="300" cy="140" r="3"/><circle cx="352" cy="140" r="3"/>
+    <circle cx="300" cy="210" r="3"/><circle cx="352" cy="210" r="3"/>
+    <circle cx="470" cy="140" r="3"/><circle cx="522" cy="140" r="3"/>
+    <circle cx="470" cy="210" r="3"/><circle cx="522" cy="210" r="3"/>
+    <circle cx="620" cy="140" r="3"/><circle cx="672" cy="140" r="3"/>
+    <circle cx="620" cy="210" r="3"/><circle cx="672" cy="210" r="3"/>
+    <circle cx="300" cy="340" r="3"/><circle cx="352" cy="340" r="3"/>
+    <circle cx="300" cy="410" r="3"/><circle cx="352" cy="410" r="3"/>
+    <circle cx="470" cy="340" r="3"/><circle cx="522" cy="340" r="3"/>
+    <circle cx="470" cy="410" r="3"/><circle cx="522" cy="410" r="3"/>
+  </g>
+  <g fill="none" stroke="#f4f7fa" stroke-width="8" stroke-linecap="square">
+    <path d="M96 188L228 128M96 512L228 444"/>
+    <path d="M118 198L128 498M156 180L168 478M194 162L208 458M230 146L242 440"/>
+  </g>
+  <polygon points="760,168 860,196 860,360 760,332" fill="#f6e2bc"/>
+  <rect x="590" y="230" width="96" height="240" fill="#241f1b"/>
+  <g transform="translate(108,468) rotate(-11)">
+    <rect width="132" height="15" rx="1" fill="#f4efe6" stroke="#c9bfb0"/>
+    <rect y="18" width="132" height="15" rx="1" fill="#efe8db" stroke="#c9bfb0"/>
+    <rect y="36" width="132" height="15" rx="1" fill="#e7dfd0" stroke="#c9bfb0"/>
+  </g>
+  <rect x="250" y="452" width="460" height="18" fill="#2a261f"/>
+</svg>

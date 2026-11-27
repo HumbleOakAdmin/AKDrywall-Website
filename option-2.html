@@ -4,99 +4,87 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="robots" content="noindex, nofollow">
-  <meta name="theme-color" content="#f3efe6">
-  <meta name="description" content="A&K Drywall is Edmonton’s family-owned interior systems contractor. Drywall, steel framing, insulation and finishes for commercial, multifamily and residential projects since 2006.">
-  <title>A&amp;K Drywall | Edmonton Interior Systems · Option 2</title>
+  <meta name="theme-color" content="#12100e">
+  <meta name="description" content="A high-end look at A&K Drywall. Finished interiors for Edmonton commercial, multifamily and residential projects. Family-owned since 2006.">
+  <title>A&amp;K Drywall · Atelier · Option 2</title>
   <link rel="icon" href="favicon.ico">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,560&family=Outfit:wght@400;520;640&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/version-nav.css">
   <style>
-    :root { --ink:#1c1915; --muted:#6d655c; --line:rgba(28,25,21,.14); --red:#c8372d; --paper:#f3efe6; --card:#faf7f1; --ease:cubic-bezier(.16,1,.3,1); }
+    :root { --ink:#f4efe8; --muted:#b7aea3; --line:rgba(244,239,232,.16); --red:#e24a3c; --ease:cubic-bezier(.16,1,.3,1); }
     * { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    body { margin: 0 0 84px; background: var(--paper); color: var(--ink); font: 17px/1.5 "Instrument Sans", Arial, sans-serif; }
-    a { color: inherit; text-decoration: none; }
+    body { margin: 0 0 84px; color: var(--ink); background: #12100e; font: 16px/1.5 Outfit, Arial, sans-serif; }
+    a { color: inherit; }
     img { display: block; max-width: 100%; }
     .wrap { width: 85vw; margin: 0 auto; }
-    [id] { scroll-margin-top: 120px; }
-    header.nav { position: sticky; top: 38px; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 18px; width: 100%; min-height: 72px; padding-inline: 7.5vw; background: var(--paper); border-bottom: 1px solid var(--line); }
-    .rail { position: absolute; left: 0; right: 0; bottom: -1px; height: 1px; }
-    .rail span { display: block; height: 100%; width: 0; background: var(--red); }
-    .brand { display: flex; align-items: center; gap: 10px; font-weight: 500; letter-spacing: -0.03em; }
-    .brand img { width: 36px; height: 36px; object-fit: contain; }
-    .nav-links { display: none; gap: 22px; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; }
-    .nav-links a { transition: color .35s var(--ease); }
-    .phone { font-size: 14px; letter-spacing: .04em; }
-    .hero { min-height: calc(100svh - 110px); display: grid; align-content: center; gap: 36px; padding: 48px 0; }
-    .kicker { margin: 0 0 18px; color: var(--red); font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
-    h1 { margin: 0; max-width: 9ch; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(64px, 8.4vw, 118px); line-height: .86; letter-spacing: -0.045em; }
-    h1 em { font-style: italic; }
-    .lede { max-width: 36ch; margin: 22px 0 0; color: var(--muted); font-size: 18px; }
-    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 28px; }
-    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 18px; border-radius: 999px; border: 1px solid var(--ink); background: var(--ink); color: #faf7f1; font: 500 14px/1 "Instrument Sans", sans-serif; letter-spacing: .04em; cursor: pointer; }
-    .btn.quiet { background: transparent; color: var(--ink); }
-    .wall { order: -1; margin: 0; width: 100%; border-radius: 8px; overflow: hidden; background: #e6dfd3; }
-    .wall img { width: 100%; height: 420px; object-fit: cover; display: block; }
-    .index { display: grid; border-top: 1px solid var(--line); }
-    .index a, .index article { display: grid; gap: 6px; padding: 22px 0; border-bottom: 1px solid var(--line); }
-    .num { color: var(--red); font-size: 12px; letter-spacing: .16em; }
-    .index h3, .work strong { margin: 0; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(32px, 4vw, 52px); letter-spacing: -0.04em; line-height: 1; }
-    .index p, .fine { margin: 0; color: var(--muted); }
-    section { padding: 72px 0; }
-    section.hero { padding: 48px 0; }
-    h2 { margin: 0 0 28px; font-family: "Instrument Serif", Georgia, serif; font-weight: 400; font-size: clamp(40px, 5vw, 68px); letter-spacing: -0.04em; line-height: .95; }
-    .work a { display: grid; grid-template-columns: 72px minmax(0, 1fr); gap: 8px 18px; align-items: baseline; padding: 18px 0; border-bottom: 1px solid var(--line); }
-    .work strong { font-size: clamp(28px, 3vw, 42px); }
-    .status { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; color: var(--red); }
-    .work em { grid-column: 2; font-style: normal; color: var(--muted); font-size: 14px; }
-    .estimate { display: grid; gap: 28px; padding: 28px; background: var(--card); border: 1px solid var(--line); border-radius: 28px; }
-    form h2 { margin-bottom: 8px; }
-    label { display: grid; gap: 6px; margin-top: 14px; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
-    input, select, textarea { width: 100%; border: 0; border-bottom: 1px solid var(--line); background: transparent; padding: 12px 0; font: 16px/1.4 "Instrument Sans", sans-serif; color: inherit; border-radius: 0; }
-    input:focus, select:focus, textarea:focus { outline: none; border-bottom-color: var(--ink); }
-    textarea { min-height: 90px; resize: vertical; }
-    .estimate .actions { margin-top: 18px; }
-    .row { display: grid; gap: 0 18px; }
+    a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
+    .nav { position: sticky; top: 38px; z-index: 40; display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 72px; padding-inline: 7.5vw; background: #12100e; }
+    .brand { display: flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 640; }
+    .brand img { width: 40px; height: 40px; object-fit: contain; }
+    .nav-links { display: none; gap: 22px; }
+    .nav-links a { text-decoration: none; font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+    .phone { text-decoration: none; font-weight: 640; }
+    [id] { scroll-margin-top: 124px; }
+    .hero { display: grid; gap: 22px; padding: 12px 0 28px; align-items: end; }
+    .kicker { margin: 0 0 10px; color: var(--red); font-size: 12px; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: clamp(56px, 9vw, 104px); line-height: .9; letter-spacing: -.04em; }
+    .lede { margin: 14px 0 0; color: var(--muted); max-width: 28ch; }
+    .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 18px; border-radius: 999px; border: 0; background: var(--ink); color: #12100e; font: inherit; font-weight: 640; text-decoration: none; cursor: pointer; }
+    .btn.quiet { background: transparent; color: var(--ink); border: 1px solid var(--line); }
+    .room { margin: 0; border-radius: 18px; overflow: hidden; background: #1a1815; }
+    .room img { width: 100%; height: auto; }
+    .scopes { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 0 20px; }
+    .scopes a { display: grid; gap: 6px; min-height: 110px; align-content: end; padding: 14px; border-radius: 16px; text-decoration: none; background: #1b1916; }
+    .scopes span { color: var(--red); font-size: 12px; letter-spacing: .12em; }
+    .scopes strong { font-family: Fraunces, Georgia, serif; font-size: 28px; font-weight: 500; }
+    .work a { display: grid; grid-template-columns: 72px 1fr auto; gap: 12px; align-items: baseline; padding: 18px 0; border-top: 1px solid var(--line); text-decoration: none; }
+    .work strong { font-family: Fraunces, Georgia, serif; font-size: clamp(28px, 4vw, 44px); font-weight: 500; letter-spacing: -.03em; }
+    .work em, .work span { color: var(--muted); font-style: normal; font-size: 13px; letter-spacing: .08em; text-transform: uppercase; }
+    .band { margin: 36px 0; padding: 28px 7.5vw; background: #f4efe8; color: #1c1915; }
+    .band .wrap { width: 100%; }
+    .band h2 { margin: 0 0 16px; font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: clamp(36px, 5vw, 56px); letter-spacing: -.03em; }
+    .estimate { display: grid; gap: 18px; }
+    label { display: grid; gap: 6px; margin-bottom: 10px; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+    input, select, textarea { width: 100%; border: 0; border-bottom: 1px solid rgba(28,25,21,.25); padding: 10px 0; background: transparent; color: #1c1915; font: inherit; border-radius: 0; }
+    textarea { min-height: 72px; resize: vertical; }
     .trap { position: absolute; left: -9999px; }
-    .quote-note { margin: 8px 0 0; max-width: 36ch; font-family: "Instrument Serif", Georgia, serif; font-size: 28px; line-height: 1.2; }
-    :focus-visible { outline: 2px solid var(--red); outline-offset: 3px; }
-    details { border-bottom: 1px solid var(--line); padding: 16px 0; }
-    summary { cursor: pointer; font-size: 18px; }
-    details p { color: var(--muted); }
-    .close { display: grid; gap: 8px; padding-bottom: 28px; }
-    .close a { text-decoration: underline; text-underline-offset: 3px; }
-    footer { padding: 0 0 20px; color: var(--muted); font-size: 13px; }
+    .band .btn { background: #1c1915; color: #f4efe8; }
+    .fine, .quote-note { color: #6d655c; }
+    .quote-note { font-family: Fraunces, Georgia, serif; font-size: 28px; }
+    details { border-top: 1px solid var(--line); padding: 14px 0; }
+    summary { cursor: pointer; }
+    details p { margin: 8px 0 0; color: var(--muted); }
+    .close { padding: 10px 0 28px; }
+    .close h2 { margin: 0; font-family: Fraunces, Georgia, serif; font-weight: 500; font-size: clamp(32px, 5vw, 48px); }
+    .close p { color: var(--muted); }
+    .close a { color: var(--ink); }
+    footer { color: var(--muted); font-size: 13px; padding-bottom: 16px; }
     .dock { position: fixed; left: 12px; right: 12px; bottom: 12px; z-index: 50; display: grid; grid-template-columns: 1fr 1.3fr; gap: 8px; }
-    @media (prefers-reduced-motion: no-preference) {
-      .wall img { animation: rise .7s var(--ease) both; }
-      h1, .lede, .actions { animation: rise .7s var(--ease) both; }
-      .lede { animation-delay: .08s; }
-      .actions { animation-delay: .16s; }
-      .index a, .work a, .nav-links a, .btn { transition: transform .35s var(--ease), color .35s var(--ease), background .35s var(--ease); }
-    }
-    @keyframes rise { from { opacity: 0; transform: translateY(16px); } }
-    html.motion .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s var(--ease), transform .7s var(--ease); }
-    html.motion .reveal.in { opacity: 1; transform: none; }
-    @media (hover: hover) {
-      .nav-links a:hover, .index a:hover h3, .work a:hover strong { color: var(--red); }
-      .btn:hover { transform: translateY(-2px); }
-      .index a:hover, .work a:hover { transform: translateX(8px); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .btn, .index a, .work a, .nav-links a { transition: none; }
-    }
     @media (min-width: 900px) {
       body { margin-bottom: 0; }
-      .nav-links { display: flex; }
       .dock { display: none; }
-      .hero { grid-template-columns: 1.25fr .75fr; align-items: center; }
-      .index { grid-template-columns: 1fr 1fr; }
-      .index a:nth-child(odd) { padding-right: 40px; }
-      .index a:nth-child(even) { padding-left: 40px; border-left: 1px solid var(--line); }
-      .estimate { grid-template-columns: .8fr 1.2fr; gap: 48px; padding: 48px; align-items: start; }
-      .row { grid-template-columns: 1fr 1fr; }
+      .nav-links { display: flex; }
+      .hero { grid-template-columns: .8fr 1.2fr; align-items: center; padding: 28px 0 48px; }
+      .scopes { grid-template-columns: repeat(4, 1fr); }
+      .estimate { grid-template-columns: .8fr 1.2fr; align-items: start; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .room img, h1, .lede, .actions { animation: rise .8s var(--ease) both; }
+      .lede { animation-delay: .08s; }
+      .actions { animation-delay: .16s; }
+      .scopes a, .work a, .btn, .nav-links a { transition: transform .35s var(--ease), color .35s var(--ease), background .35s var(--ease); }
+    }
+    @keyframes rise { from { opacity: 0; transform: translateY(16px); } }
+    @media (hover: hover) {
+      .work a:hover strong, .nav-links a:hover, .scopes a:hover strong { color: var(--red); }
+      .btn:hover { transform: translateY(-2px); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .scopes a, .work a, .btn, .nav-links a { transition: none; }
     }
   </style>
 </head>
@@ -109,114 +97,87 @@
   <header class="nav">
     <a class="brand" href="option-2.html"><img src="assets/logo.png" alt="A&amp;K Drywall">A&amp;K Drywall</a>
     <nav class="nav-links" aria-label="Page">
-      <a href="#services">Services</a>
+      <a href="#scopes">The wall</a>
       <a href="#work">Projects</a>
-      <a href="#answers">Answers</a>
       <a href="#estimate">Estimate</a>
     </nav>
     <a class="phone" href="tel:+17802635193">780-263-5193</a>
-    <div class="rail" aria-hidden="true"><span></span></div>
   </header>
-
   <main>
     <section class="hero wrap">
       <div>
         <p class="kicker">Edmonton drywall · since 2006</p>
-        <h1>Board. Tape. <em>Finish.</em></h1>
-        <p class="lede">Homes, apartments and commercial rooms.</p>
+        <h1>The room, finished.</h1>
+        <p class="lede">Studs on one wall. Tape on the next. A surface ready for paint.</p>
         <div class="actions">
           <a class="btn" href="#estimate">Request an estimate</a>
           <a class="btn quiet" href="tel:+17802635193">780-263-5193</a>
         </div>
       </div>
-      <figure class="wall"><img src="assets/wall.svg" alt="Drywall sheets with taped joints and screw heads"></figure>
+      <figure class="room"><img src="assets/room.svg" alt="A room in progress: steel studs, taped drywall, a finished wall, and a stack of board"></figure>
     </section>
-
-    <section class="wrap" id="services">
-      <h2 class="reveal">On the wall.</h2>
-      <div class="index">
-        <a class="reveal" href="#estimate"><span class="num">01</span><h3>Steel studs</h3></a>
-        <a class="reveal" href="#estimate"><span class="num">02</span><h3>Boarding</h3></a>
-        <a class="reveal" href="#estimate"><span class="num">03</span><h3>Insulation</h3></a>
-        <a class="reveal" href="#estimate"><span class="num">04</span><h3>Tape &amp; finish</h3></a>
-      </div>
+    <section class="wrap scopes" id="scopes">
+      <a href="#estimate"><span>01</span><strong>Studs</strong></a>
+      <a href="#estimate"><span>02</span><strong>Board</strong></a>
+      <a href="#estimate"><span>03</span><strong>Tape</strong></a>
+      <a href="#estimate"><span>04</span><strong>Finish</strong></a>
     </section>
-
     <section class="wrap work" id="work">
-      <h2 class="reveal">Selected work.</h2>
-      <a class="reveal" href="#estimate"><span class="status">Now</span><strong>Gill Manor</strong><em>Gill Built</em></a>
-      <a class="reveal" href="#estimate"><span class="status">Now</span><strong>Baldwin Estates</strong><em>Zat Enterprises</em></a>
-      <a class="reveal" href="#estimate"><span class="status">Now</span><strong>Kingsway Professional Center</strong><em>KNN</em></a>
-      <a class="reveal" href="#estimate"><span class="status">Now</span><strong>Southern Village</strong><em>Underway</em></a>
-      <a class="reveal" href="#estimate"><span class="status">Next</span><strong>McKernan Apartments</strong><em>Westrich</em></a>
-      <a class="reveal" href="#estimate"><span class="status">Next</span><strong>91st</strong><em>HASCO</em></a>
-      <a class="reveal" href="#estimate"><span class="status">Done</span><strong>Westpointe Greens</strong><em>Seymour Pacific</em></a>
-      <a class="reveal" href="#estimate"><span class="status">Done</span><strong>Jardin Apartments</strong><em>Seymour Pacific</em></a>
-      <a class="reveal" href="#estimate"><span class="status">Done</span><strong>Gill Villa</strong><em>Gill Built</em></a>
-      <a class="reveal" href="#estimate"><span class="status">Done</span><strong>Gill Estates</strong><em>Gill Built</em></a>
-      <a class="reveal" href="#estimate"><span class="status">Done</span><strong>10021 83rd Ave</strong><em>Lakeview</em></a>
+      <a href="#estimate"><span>Now</span><strong>Gill Manor</strong><em>Gill Built</em></a>
+      <a href="#estimate"><span>Now</span><strong>Baldwin Estates</strong><em>Zat Enterprises</em></a>
+      <a href="#estimate"><span>Now</span><strong>Kingsway Professional Center</strong><em>KNN</em></a>
+      <a href="#estimate"><span>Now</span><strong>Southern Village</strong><em>Underway</em></a>
+      <a href="#estimate"><span>Next</span><strong>McKernan Apartments</strong><em>Westrich</em></a>
+      <a href="#estimate"><span>Next</span><strong>91st</strong><em>HASCO</em></a>
+      <a href="#estimate"><span>Done</span><strong>Westpointe Greens</strong><em>Seymour Pacific</em></a>
+      <a href="#estimate"><span>Done</span><strong>Jardin Apartments</strong><em>Seymour Pacific</em></a>
+      <a href="#estimate"><span>Done</span><strong>Gill Villa</strong><em>Gill Built</em></a>
+      <a href="#estimate"><span>Done</span><strong>Gill Estates</strong><em>Gill Built</em></a>
+      <a href="#estimate"><span>Done</span><strong>10021 83rd Ave</strong><em>Lakeview</em></a>
     </section>
-
-    <section class="wrap">
-      <div class="estimate reveal" id="estimate">
+    <section class="band" id="estimate">
+      <div class="wrap estimate">
         <div>
-          <p class="kicker">Free estimate</p>
           <h2>Tell us the building.</h2>
-          <p class="fine">Commercial and multifamily are the lead work. Homes are where A&amp;K started, founded in 2006 by Joga Dhothar and his brothers. His family has led the company for the last 10 years. Office at 5105 55 Ave, Edmonton.</p>
+          <p>Insulation, texture, paint, fire-rated board, DensGlass, T-bar and concrete lifting sit with the same crew. Family-owned since 2006. Office at 5105 55 Ave.</p>
         </div>
         <form data-quote>
-          <div class="row">
-            <label>Name *<input name="name" required autocomplete="name"></label>
-            <label>Phone *<input name="phone" type="tel" required autocomplete="tel"></label>
-          </div>
-          <div class="row">
-            <label>Project
-              <select name="type"><option>Commercial</option><option>Multifamily</option><option>Residential</option><option>Other</option></select>
-            </label>
-            <label>Email<input name="email" type="email" autocomplete="email"></label>
-          </div>
-          <label>Scope *<textarea name="details" required placeholder="Address, size, and the stages you need."></textarea></label>
+          <label>Name *<input name="name" required autocomplete="name"></label>
+          <label>Phone *<input name="phone" type="tel" required autocomplete="tel"></label>
+          <label>Project
+            <select name="type"><option>Commercial</option><option>Multifamily</option><option>Residential</option><option>Other</option></select>
+          </label>
+          <label>Scope *<textarea name="details" required placeholder="Address and the stages you need."></textarea></label>
           <label class="trap" aria-hidden="true">Leave blank<input name="website" tabindex="-1" autocomplete="off"></label>
-          <div class="actions">
-            <button class="btn" type="submit">Request estimate</button>
-          </div>
-          <p class="fine">This preview stays on the page. Call 780-263-5193 or 780-803-3626, or email office@akdrywall.ca.</p>
+          <button class="btn" type="submit">Request estimate</button>
+          <p class="fine">Preview only. This request is not sent.</p>
         </form>
       </div>
     </section>
-
     <section class="wrap" id="answers">
-      <h2 class="reveal">Before you call.</h2>
-      <details class="reveal" open>
+      <details>
         <summary>Where do you work?</summary>
-        <p>Edmonton and surrounding communities. The office is at 5105 55 Ave.</p>
+        <p>Edmonton and surrounding communities.</p>
       </details>
-      <details class="reveal">
-        <summary>A single scope, or the whole interior?</summary>
-        <p>Either. Board only, or framing, insulation, taping, texture and paint as one sequence with one contact.</p>
-      </details>
-      <details class="reveal">
+      <details>
         <summary>Who owns the company?</summary>
-        <p>Founded in 2006 by Joga Dhothar and his brothers. For the last 10 years his family has led the business.</p>
+        <p>Founded in 2006 by Joga Dhothar and his brothers. His family has led it for the last 10 years.</p>
       </details>
-      <details class="reveal">
-        <summary>How do I get safety credentials?</summary>
-        <p>Call the office. We share current safety information for the project you are bidding or running.</p>
+      <details>
+        <summary>Safety credentials?</summary>
+        <p>Ask the office. We share current safety information for the project you are bidding.</p>
       </details>
     </section>
-
     <section class="wrap close">
-      <p class="kicker">Office</p>
       <h2>5105 55 Ave, Edmonton.</h2>
       <p><a href="tel:+17802635193">780-263-5193</a> · <a href="tel:+17808033626">780-803-3626</a> · <a href="mailto:office@akdrywall.ca">office@akdrywall.ca</a></p>
     </section>
   </main>
-  <footer class="wrap">© <span data-year></span> A&amp;K Drywall · Edmonton, Alberta</footer>
+  <footer class="wrap">© <span data-year></span> A&amp;K Drywall</footer>
   <div class="dock">
     <a class="btn quiet" href="tel:+17802635193">Call</a>
     <a class="btn" href="#estimate">Estimate</a>
   </div>
-  <script src="assets/motion.js"></script>
   <script src="assets/quote.js"></script>
 </body>
 </html>

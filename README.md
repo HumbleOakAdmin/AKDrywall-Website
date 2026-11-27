@@ -5,8 +5,8 @@ Three GitHub Pages versions of the A&K Drywall site. They use the live company d
 ## Versions
 
 - [Lite](https://humbleoakadmin.github.io/AKDrywall-Website/) — tighter version of the current site
-- [Option 1](https://humbleoakadmin.github.io/AKDrywall-Website/option-1.html) — builder and homeowner paths
-- [Option 2](https://humbleoakadmin.github.io/AKDrywall-Website/option-2.html) — editorial layout
+- [Option 1](https://humbleoakadmin.github.io/AKDrywall-Website/option-1.html) — modern midpoint, the wall in four stages
+- [Option 2](https://humbleoakadmin.github.io/AKDrywall-Website/option-2.html) — high-end showroom
 
 Hard-refresh if an older layout is still cached. The pages are for review only.
 
